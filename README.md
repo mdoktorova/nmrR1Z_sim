@@ -43,15 +43,21 @@ This may take a while depending on the size of the trajectory; start process in 
 
 2. Get the CH bond autocorrelation functions and order parameters from the output files from Step 1. To do this, open MATLAB inside the directory with all output files from Step 1 and run the calculate_ACF_Scd.m script. MATLAB can be started from the terminal without a GUI by typing:
 
+```
 [path_to_matlab]/matlab -nodesktop
+```
 
 The script can then be executed by simply typing its name:
 
->> calculate_ACF_Scd
+```
+calculate_ACF_Scd
+```
 
 3. Calculate the relaxation rates from the ACFs with the calculate_R1.m script from within MATLAB (open the file first and modify the user-specified parameters if necessary):
 
->> calculate_R1
+```
+calculate_R1
+```
 
 -------------------------------------------
 To visualize and further analyze the data:
@@ -62,11 +68,13 @@ To visualize and further analyze the data:
 
 - To estimate the full bilayer thickness from the number density profile of the bilayer, calculate the number density of the whole bilayer (example in additional_scripts/calculate_ndp.tcl) and find the distance between the slabs where the NDP falls below 5% of the max value. For example, in MATLAB that can be done with the following commands:
 
->> ndp = load('ndp.dat');
->> maxleft = max(ndp(1:floor(length(ndp(:,1))/2),2));
->> maxright = max(ndp(floor(length(ndp(:,1))/2):end,2));
->> maxpeak = mean([maxleft maxright]);
->> ind = find(ndp(:,2)<0.05*maxpeak);
->> indleft = ind(ind<length(ndp(:,1))/2);
->> indright = ind(ind>length(ndp(:,1))/2);
->> full_bilayer_thickness = ndp(indright(1),1)-ndp(indleft(end),1)
+```
+ndp = load('ndp.dat');  
+maxleft = max(ndp(1:floor(length(ndp(:,1))/2),2));  
+maxright = max(ndp(floor(length(ndp(:,1))/2):end,2));  
+maxpeak = mean([maxleft maxright]);  
+ind = find(ndp(:,2)<0.05*maxpeak);  
+indleft = ind(ind<length(ndp(:,1))/2);  
+indright = ind(ind>length(ndp(:,1))/2);  
+full_bilayer_thickness = ndp(indright(1),1)-ndp(indleft(end),1)
+```
