@@ -25,10 +25,10 @@ In the nmrR1 directory, update the ch_vectors.txt file by editing:
 - the name of the lipid to be analyzed (resname in VMD)
 - the names of the lipid's carbon and hydrogen atoms for which CH bond dynamics will be calculated; each row should have 3 atom names, 1 carbon followed by 2 hydrogen atoms. The names of the atoms will be used to make atom selections. For double bonds where a carbon has only one hydrogen atom, write the name of the hydrogen atom twice. For example, for the oleoyl chain of POPC, using CHARMM36 notation, the file will include:
 
-C28 H8R H8S
-C29 H9R H9R
-C210 H10R H10R
-C211 H11R H11S
+C28 H8R H8S  
+C29 H9R H9R  
+C210 H10R H10R  
+C211 H11R H11S  
 
 --------------------------------------------------------------------------------------
 To calculate the relaxation rates:
