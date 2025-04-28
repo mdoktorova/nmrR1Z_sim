@@ -2,8 +2,8 @@
 --------------------------------------------------------------------------------------
 Package for calculating carbon-hydrogen (CH) bond R1Z relaxation rates from all-atom MD simulations
  
-Protocol based on Doktorova, Khelashvili, Ashkar and Brown, 2022
-https://doi.org/10.1101/2022.09.03.506496
+Protocol based on Doktorova, Khelashvili, Ashkar and Brown, 2022, Biophysical Journal, 122:984-1002  
+DOI: 10.1016/j.bpj.2022.12.007
 
 If you use the results from the code in a publication, please cite the article above.
 
