@@ -1,6 +1,6 @@
 # nmrR1Z_sim
 --------------------------------------------------------------------------------------
-Package for calculating CH bond R1Z relaxation rates from all-atom MD simulations
+Package for calculating carbon-hydrogen (CH) bond R1Z relaxation rates from all-atom MD simulations
  
 Protocol based on Doktorova, Khelashvili, Ashkar and Brown, 2022
 https://doi.org/10.1101/2022.09.03.506496
