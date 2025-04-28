@@ -6,7 +6,6 @@ Protocol based on Doktorova, Khelashvili, Ashkar and Brown, 2022
 https://doi.org/10.1101/2022.09.03.506496
 
 If you use the results from the code in a publication, please cite the article above.
---------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------
 To run the calculation, need the following in a single directory:
