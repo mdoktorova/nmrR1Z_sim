@@ -10,17 +10,17 @@ If you use the results from the code in a publication, please cite the article a
 --------------------------------------------------------------------------------------
 To run the calculation, need the following in a single directory:
 
-- _traj_center.dcd_: trajectory centered so that mean z position of all terminal methyl groups in the bilayer is at z=0. Example script for centering the trajectory is included in the _additional_scripts/_ directory. This is not critical but helps with keeping everything consistent.
+- _traj_center.dcd_: trajectory centered so that mean z position of all terminal methyl groups in the bilayer is at z=0. Example script for centering the trajectory is included in the additional_scripts/ directory. This is not critical but helps with keeping everything consistent.
 
 - _struct.psf_: psf file for the trajectory
 
-- _box2.txt_: file with simulation box dimensions. Example script for calculating the box dimensions is included in the _additional_scripts/_ directory.
+- _box2.txt_: file with simulation box dimensions. Example script for calculating the box dimensions is included in the additional_scripts/ directory.
 
-- _nmrR1_ directory included in this package: a separate nmrR1 directory will be needed for each lipid for which the CH bond dynamics need to be analyzed. For example, in mixtures the directory can be renamed to nmrR1_resname where 'resname' is the name of the lipid
+- nmrR1 directory included in this package: a separate nmrR1 directory will be needed for each lipid for which the CH bond dynamics need to be analyzed. For example, in mixtures the directory can be renamed to nmrR1_resname where 'resname' is the name of the lipid
 
 
 --------------------------------------------------------------------------------------
-In the _nmrR1_ directory, update the _ch_vectors.txt_ file by editing:
+In the nmrR1 directory, update the _ch_vectors.txt_ file by editing:
 
 - the name of the lipid to be analyzed (resname in VMD)
 - the names of the lipid's carbon and hydrogen atoms for which CH bond dynamics will be calculated; each row should have 3 atom names, 1 carbon followed by 2 hydrogen atoms. The names of the atoms will be used to make atom selections. For double bonds where a carbon has only one hydrogen atom, write the name of the hydrogen atom twice. For example, for the oleoyl chain of POPC, using CHARMM36 notation, the file will include:
@@ -62,11 +62,11 @@ calculate_R1
 -------------------------------------------
 To visualize and further analyze the data:
 
-- Plot R1 vs order parameter squared for different subsets of carbon atoms. Example script is provided in _nmrR1/results_dtt/plot_squarelaw.m_
+- Plot R1 vs order parameter squared for different subsets of carbon atoms. Example script is provided in nmrR1/results_dtt/_plot_squarelaw.m_
 
-- Fit the data to a line and use its slope to calculate the bending rigidity of the bilayer. Example script is provided in _nmrR1/results_dtt/get_kappa_from_squarelaw.m_
+- Fit the data to a line and use its slope to calculate the bending rigidity of the bilayer. Example script is provided in nmrR1/results_dtt/_get_kappa_from_squarelaw.m_
 
-- To estimate the full bilayer thickness from the number density profile of the bilayer, calculate the number density of the whole bilayer (example in _additional_scripts/calculate_ndp.tcl_) and find the distance between the slabs where the NDP falls below 5% of the max value. For example, in MATLAB that can be done with the following commands:
+- To estimate the full bilayer thickness from the number density profile of the bilayer, calculate the number density of the whole bilayer (example in additional_scripts/_calculate_ndp.tcl_) and find the distance between the slabs where the NDP falls below 5% of the max value. For example, in MATLAB that can be done with the following commands:
 
 ```
 ndp = load('ndp.dat');  
