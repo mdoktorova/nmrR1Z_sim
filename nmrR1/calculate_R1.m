@@ -2,7 +2,7 @@
 % Method for calculating CH bond R1Z relaxation rates from MD simulations
 % 
 % Protocol based on Doktorova, Khelashvili, Ashkar and Brown, 2022
-% https://doi.org/10.1101/2022.09.03.506496
+% https://doi.org/10.1016/j.bpj.2022.12.007
 %
 % Milka Doktorova, November 2022
 %-------------------------------------------------------------------------
