@@ -35,7 +35,9 @@ To calculate the relaxation rates:
 
 1. Get the direction of all CH vectors in every frame of the trajectory with the following:
 
->> ./run_analysis > log.out &
+```
+./run_analysis > log.out &
+```
 
 This may take a while depending on the size of the trajectory; start process in the background 
 
