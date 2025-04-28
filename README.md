@@ -16,7 +16,7 @@ To run the calculation, need the following in a single directory:
 
 - _box2.txt_: file with simulation box dimensions. Example script for calculating the box dimensions is included in the additional_scripts/ directory.
 
-- nmrR1 directory included in this package: a separate nmrR1 directory will be needed for each lipid for which the CH bond dynamics need to be analyzed. For example, in mixtures the directory can be renamed to nmrR1_resname where 'resname' is the name of the lipid
+- nmrR1 directory included in this package: a separate nmrR1 directory will be needed for each lipid for which the CH bond dynamics need to be analyzed. For example, in mixtures the directory can be renamed to _nmrR1_resname_ where 'resname' is the name of the lipid
 
 
 --------------------------------------------------------------------------------------
